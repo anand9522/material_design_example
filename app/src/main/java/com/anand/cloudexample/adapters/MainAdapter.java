@@ -23,7 +23,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.
 
     private ArrayList<Drink> mDrinks;
     private Context mContext;
-    public static class ViewHolder extends
+
+     public static class ViewHolder extends
             RecyclerView.ViewHolder {
         public TextView mCommentTextView;
         public TextView mDateTimeTextView;
@@ -31,17 +32,19 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.
         public ViewHolder(View v) {
             super(v); }
     }
+
     public MainAdapter(Context context,
                        ArrayList<Drink> drinks) {
         mDrinks = drinks;
         mContext = context;
     }
+
     @Override
     public MainAdapter.ViewHolder
     onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(
                 parent.getContext()).inflate(
-                R.layout.adapter_main, parent, false);
+                R.layout.adapter_main_card_view, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
         viewHolder.mDateTimeTextView =
 
